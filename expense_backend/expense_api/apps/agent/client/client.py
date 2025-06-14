@@ -182,7 +182,7 @@ class ExpenseMCPClient:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         config_path = os.path.join(script_dir, "mcpConfig.json")
         print(f"[INFO] Loading MCP config from: {config_path}")
-        
+
         try:
             with open(config_path, "r") as f:
                 config = json.load(f)

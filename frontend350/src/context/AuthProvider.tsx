@@ -54,9 +54,9 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
       return;
     }
 
-    if (!existingUser) {
-      return;
-    }
+    // if (!existingUser) {
+    //   return;
+    // }
 
     try {
       const userData = await getSelfDetail();

@@ -25,7 +25,7 @@ const features = [
   },
   {
     icon: MessageSquare,
-    title: "Natural Language Cha",
+    title: "Natural Language Chat",
     description:
       'Chat with your data using everyday language. "Show me expenses from last week" or "আমার গত মাসের খরচ দেখাও" - both work perfectly.',
   },

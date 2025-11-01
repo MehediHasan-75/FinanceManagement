@@ -8,10 +8,10 @@ import sys
 import django
 
 # Add the project to Python path
-sys.path.append('/home/mehedi/03_Projects/FinanceManagement/expense_backend')
+sys.path.append('/home/mehedi/03_Projects/FinanceManagement/backend')
 
 # Set up Django environment
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'expense_backend.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 django.setup()
 
 from expense_api.apps.agent.serializers import ResponseSerializer

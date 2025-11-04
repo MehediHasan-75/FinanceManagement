@@ -104,8 +104,22 @@ const Navbar = () => {
                 : "cursor-pointer hover:opacity-80"
             )}
           >
-            <Image src="/databrain_log.png" alt="Logo" width={50} height={50}  className="inline-block"/>
-            {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"}
+            <Image
+              src="/databrain_log.png"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="inline-block"
+            />
+            <div
+              className={`ml-2 hidden md:inline-block text-2xl font-bold transition-colors duration-500 ease-in-out bg-clip-text text-transparent ${
+                theme === "dark"
+                  ? "bg-linear-to-r from-purple-400 via-pink-500 to-red-500"
+                  : "bg-linear-to-r from-blue-400 via-green-400 to-yellow-400"
+              }`}
+            >
+              {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"}
+            </div>
           </button>
 
           {/* Desktop Menu */}

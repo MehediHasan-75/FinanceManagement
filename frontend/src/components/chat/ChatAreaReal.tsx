@@ -375,7 +375,7 @@ const ChatArea = () => {
                   theme === "dark" ? "text-gray-100" : "text-gray-900"
                 }`}
               >
-                AI Finance Assistant
+                {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"} Assistant
               </h2>
             </div>
             <div className="flex items-center space-x-2">

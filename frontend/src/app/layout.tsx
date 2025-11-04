@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Finance Management",
-  description: "Project 350 for SUST",
+  title: process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI",
+  description:
+    "Manage your data with Voice & AI powered by DataBrain.AI | Project350 of SUST CSE Batch 2020",
 };
 
 export default function RootLayout({
@@ -31,9 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Create a client component wrapper */}
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

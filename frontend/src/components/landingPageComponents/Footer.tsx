@@ -14,7 +14,7 @@ const Footer = () => {
         "text-sm",
         theme === 'dark' ? "text-gray-500" : "text-gray-400"
       )}>
-        &copy; {new Date().getFullYear()} FinBot. All rights reserved.
+        &copy; {new Date().getFullYear()} {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"} All rights reserved.
       </p>
     </footer>
   );

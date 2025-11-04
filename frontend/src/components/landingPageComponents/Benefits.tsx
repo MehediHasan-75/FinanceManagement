@@ -61,7 +61,7 @@ const Benefits = () => {
               theme === "dark" ? "text-white" : "text-gray-900"
             )}
           >
-            Why FinBot is Revolutionary
+            Why {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"} is Revolutionary
           </h2>
           <p
             className={clsx(

@@ -17,6 +17,7 @@ import clsx from "clsx";
 import { useRouter, usePathname } from "next/navigation";
 import SettingsModal from "@/components/SettingsModal";
 import { useUser } from "@/context/AuthProvider";
+import Image from "next/image";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -103,7 +104,8 @@ const Navbar = () => {
                 : "cursor-pointer hover:opacity-80"
             )}
           >
-            FinBot
+            <Image src="/databrain_log.png" alt="Logo" width={50} height={50}  className="inline-block"/>
+            {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"}
           </button>
 
           {/* Desktop Menu */}

@@ -56,7 +56,7 @@ export default function Hero() {
             )}
           >
             Experience the future of data management with{" "}
-            <strong>FinBot</strong> - an AI-powered platform that lets you
+            <strong>{process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"}</strong> - an AI-powered platform that lets you
             manage any kind of data using natural chat, voice commands, and
             manual operations in both <strong>Bengali and English</strong>.
           </p>
@@ -111,7 +111,7 @@ export default function Hero() {
           {imageUrl && (
             <Image
               src={imageUrl}
-              alt="FinBot Voice & AI Data Management"
+              alt={`${process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"} Voice & AI Data Management`}
               width={500}
               height={400}
               className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105"

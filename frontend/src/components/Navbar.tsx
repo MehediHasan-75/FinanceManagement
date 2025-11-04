@@ -60,16 +60,32 @@ const Navbar = ({ isOpen, setIsOpen }: SideBarProps) => {
               onClick={() => router.push("/")}
               className={`mr-12 w-32 md:w-40 lg:w-48 transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer ${
                 isOpen ? "mx-auto" : ""
-              }`}
+              } flex items-center`}
             >
-              <Image
-                src="/image.png"
-                alt="Logo"
-                width={192}
-                height={48}
-                className="w-full h-auto transition-opacity duration-500"
-                priority
-              />
+              {/* Image wrapper: parent must be relative with explicit size for Image fill to work */}
+              <div className="relative h-12 md:h-10 lg:h-12 w-12 md:w-10 lg:w-12 shrink-0">
+                <Image
+                  src={
+                    theme == "dark"
+                      ? "/databrain_logo.png"
+                      : "/databrain_log.png"
+                  }
+                  alt="Logo"
+                  fill={true}
+                  className="object-contain transition-opacity duration-500"
+                  priority
+                />
+              </div>
+
+              <div
+                className={`ml-2 hidden md:inline-block text-2xl font-bold transition-colors duration-500 ease-in-out bg-clip-text text-transparent ${
+                  theme === "dark"
+                    ? "bg-linear-to-r from-purple-400 via-pink-500 to-red-500"
+                    : "bg-linear-to-r from-blue-400 via-green-400 to-yellow-400"
+                }`}
+              >
+                {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"}
+              </div>
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -111,16 +127,31 @@ const Navbar = ({ isOpen, setIsOpen }: SideBarProps) => {
               onClick={() => router.push("/")}
               className={`w-32 md:w-40 lg:w-48 transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer ${
                 isOpen ? "mx-auto" : ""
-              }`}
+              } flex items-center`}
             >
-              <Image
-                src="/image.png"
-                alt="Logo"
-                width={192}
-                height={48}
-                className="w-full h-auto transition-opacity duration-500"
-                priority
-              />
+              <div className="relative h-12 md:h-10 lg:h-12 w-12 md:w-10 lg:w-12 shrink-0">
+                <Image
+                  src={
+                    theme == "dark"
+                      ? "/databrain_logo.png"
+                      : "/databrain_log.png"
+                  }
+                  alt="Logo"
+                  fill={true}
+                  className="object-contain transition-opacity duration-500"
+                  priority
+                />
+              </div>
+
+              <div
+                className={`ml-2 hidden md:inline-block text-lg font-bold transition-colors duration-500 ease-in-out bg-clip-text text-transparent ${
+                  theme === "dark"
+                    ? "bg-linear-to-r from-purple-400 via-pink-500 to-red-500"
+                    : "bg-linear-to-r from-blue-400 via-green-400 to-yellow-400"
+                }`}
+              >
+                {process.env.NEXT_PUBLIC_APP_NAME || "DataBrain.AI"}
+              </div>
             </div>
           </div>
         )}
